@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPaneApp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller">
+    <children>
+      <Label fx:id="lblInput" layoutX="38.0" layoutY="581.0" text="Input Number   :">
+         <font>
+            <Font name="Lucida Sans Unicode" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtInput" layoutX="162.0" layoutY="578.0" promptText="Input new number here" />
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" defaultButton="true" layoutX="351.0" layoutY="579.0" onAction="#handleBtnAdd" prefHeight="29.0" prefWidth="70.0" style="-fx-background-color: #00af05;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXListView fx:id="lvNumberArray" layoutX="26.0" layoutY="46.0" prefHeight="513.0" prefWidth="97.0" />
+      <Label layoutX="26.0" layoutY="23.0" text="Number in Array">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="139.0" layoutY="23.0" text="Simulation">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnReset" buttonType="RAISED" disable="true" layoutX="38.0" layoutY="631.0" onAction="#handleBtnReset" prefHeight="29.0" prefWidth="70.0" style="-fx-background-color: #c12020;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnStart" buttonType="RAISED" layoutX="133.0" layoutY="631.0" onAction="#handleBtnStart" prefHeight="29.0" prefWidth="70.0" ripplerFill="BLACK" style="-fx-background-color: #394bdb;" text="Start" textFill="WHITE">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Pane fx:id="SimulationPane" layoutX="128.0" layoutY="46.0" prefHeight="513.0" prefWidth="957.0">
+         <children><TableView fx:id="tblNumber" layoutX="120.0" layoutY="235.0" prefHeight="61.0" prefWidth="702.0" visible="false">
+              <columns>
+                <TableColumn fx:id="col1" editable="false" prefWidth="35.0" sortable="false" text="1" />
+                <TableColumn fx:id="col2" editable="false" prefWidth="35.0" sortable="false" text="2" />
+                  <TableColumn fx:id="col3" editable="false" prefWidth="35.0" sortable="false" text="3" />
+                  <TableColumn fx:id="col4" editable="false" prefWidth="35.0" sortable="false" text="4" />
+                  <TableColumn fx:id="col5" editable="false" prefWidth="35.0" sortable="false" text="5" />
+                  <TableColumn fx:id="col6" editable="false" prefWidth="35.0" sortable="false" text="6" />
+                  <TableColumn fx:id="col7" editable="false" prefWidth="35.0" sortable="false" text="7" />
+                  <TableColumn fx:id="col8" editable="false" prefWidth="35.0" sortable="false" text="8" />
+                  <TableColumn fx:id="col9" editable="false" prefWidth="35.0" sortable="false" text="9" />
+                  <TableColumn fx:id="col10" editable="false" prefWidth="35.0" sortable="false" text="10" />
+                  <TableColumn fx:id="col11" editable="false" prefWidth="35.0" sortable="false" text="11" />
+                  <TableColumn fx:id="col12" editable="false" prefWidth="35.0" sortable="false" text="12" />
+                  <TableColumn fx:id="col13" editable="false" prefWidth="35.0" sortable="false" text="13" />
+                  <TableColumn fx:id="col14" editable="false" prefWidth="35.0" sortable="false" text="14" />
+                  <TableColumn fx:id="col15" editable="false" prefWidth="35.0" sortable="false" text="15" />
+                  <TableColumn fx:id="col16" editable="false" prefWidth="35.0" sortable="false" text="16" />
+                  <TableColumn fx:id="col17" editable="false" prefWidth="35.0" sortable="false" text="17" />
+                  <TableColumn fx:id="col18" editable="false" prefWidth="35.0" sortable="false" text="18" />
+                  <TableColumn fx:id="col19" editable="false" prefWidth="35.0" sortable="false" text="19" />
+                  <TableColumn fx:id="col20" editable="false" prefWidth="35.0" sortable="false" text="20" />
+              </columns>
+            </TableView>
+            <Label fx:id="lblBefore" layoutX="14.0" layoutY="10.0" text="Before">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAfter" layoutX="14.0" layoutY="285.0" text="After">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="12.0" />
+               </font>
+            </Label>
+            <!--<Sphere fx:id="spPosition" layoutX="98.0" layoutY="315.0" radius="10.0" visible="false" />-->
+         </children></Pane>
+      <JFXButton fx:id="btnFirst" buttonType="RAISED" disable="true" layoutX="133.0" layoutY="631.0" onAction="#handleBtnFirst" prefHeight="29.0" prefWidth="70.0" style="-fx-background-color: #4e01ad;" text="First" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPrev" buttonType="RAISED" disable="true" layoutX="228.0" layoutY="631.0" onAction="#handleBtnPrev" prefHeight="29.0" prefWidth="70.0" style="-fx-background-color: #394bdb;" text="Prev" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnNext" buttonType="RAISED" disable="true" layoutX="323.0" layoutY="631.0" onAction="#handleBtnNext" prefHeight="29.0" prefWidth="70.0" style="-fx-background-color: #394bdb;" text="Next" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="987.0" layoutY="631.0" onAction="#handleBtnDelete" prefHeight="29.0" prefWidth="70.0" style="-fx-background-color: #c12020;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+      </JFXButton>
+    </children>
+</AnchorPane>
